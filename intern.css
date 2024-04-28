@@ -1,0 +1,196 @@
+ /**{
+    background: lightblue;
+    color: blue;
+} */
+
+/* descendant selector --> li is parent and a is child*/
+li a{
+    text-decoration: none;
+    color: navy;
+}
+
+/*direct child selector --> */
+u > a {
+    color: red;
+    font-size: 20px;
+}
+
+/* display*/
+
+.block{
+    display: block;
+    color: navy;
+    background-color: black;
+    height: 35px;
+}
+
+.inline{
+    display: inline;
+    color: navy;
+    background-color: black;
+    height: 35px;
+}
+
+.inline-block{
+    display: inline-block;
+    color: navy;
+    background-color: black;
+    height: 35px;
+}
+.static{
+    position: static;
+    color: navy;    height: 35px;
+}
+
+.relative{
+    position: relative;
+    color: navy;
+    height: 35px;
+    top: 5rem;
+    left: 500px;
+}
+.parent{
+    background-color: navy;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 4rem;
+}
+
+.absolute{
+    position: absolute;
+    color: white;
+    top: 0px;
+    left: 50px;
+
+}
+
+
+.fixed{
+    position: fixed;
+    color: navy;
+    height: 35px;
+    top: 0px;
+    left: 0px;
+    background-color: gray;
+}
+
+.sticky{
+    position: sticky;
+    display: inline;
+    color: navy;
+    top: 50px;
+    left: 400px;
+    background-color: gray;
+}
+h1:nth-child(odd){
+    background-color: aqua;
+    height: 100px;
+    flex: 2;
+
+}
+h1:nth-child(even){
+    
+    background-color: darkred;
+    height: 100px;
+    flex: 1;
+}
+.pseudo{
+    display: inline-block;
+}
+.par{
+    display: flex;
+    background-color: yellow;
+    /* row,column,row-reverse,column-reverse*/
+    flex-direction: row ;
+    gap: 10px;
+    /* margin: 10px; */
+    /*row: */
+    justify-content: flex-start;
+    /*column: stretch ,flex-end,flex-start,center */
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.btcls{
+    
+    margin: 100px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    border-radius: 5px;
+    padding: 10px;
+ /*transition properties*/
+
+/*transition-delay: 1000ms;*/
+/*transition-duration: 1000ms;
+transition-property: background-color;
+if property is color then color's transiton will be slow down acording to the duration provided
+and bgcolor will be fast and vice-versa
+/* linear, ease,ease-in,ease-out,ease-in-out, cubic-bezier(0, 0.97, 1,-0.33)*/
+/*transition-timing-function: ease-in;*/
+
+transition: background-color cubic-bezier(0, 0.97, 1,-0.33) 1000ms;
+/* property ,timing function, delay, duration*/
+
+ 
+
+}
+.btcls:hover{
+    background-color: lightgreen;
+    color: black;
+    cursor: pointer;
+
+    
+}
+.bgforbl{
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    position: relative;
+}
+.ball{
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+   /* left: 300px;*/
+    
+}
+
+.ball:hover{
+    animation: moveTheBall 5s linear forwards;
+    cursor: pointer;
+}
+
+@keyframes moveTheBall{
+    25%{
+        transform: translate(400px,0);
+    }
+    50%{
+        transform: translate(400px,400px);
+    }
+    75%{
+        transform: translate(0,400px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+ @media screen and (max-width : 1000px){
+    h2{
+        color: blue;
+    }
+}
+
+@media screen and (max-width : 800px){
+    h2{
+        color: green;
+    }
+}
+
+/* .hcls h2{
+    color: blue;
+} */
